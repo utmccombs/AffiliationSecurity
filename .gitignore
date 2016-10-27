@@ -1,0 +1,6 @@
+.project
+.settings
+.gitignore
+build.properties
+.*.swp
+.DS_Store
