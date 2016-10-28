@@ -34,4 +34,6 @@ trigger TDTM_AffiliationSecurityRule on AffiliationSecurityRule__c (after delete
     handler.run(Trigger.isBefore, Trigger.isAfter, Trigger.isInsert, Trigger.isUpdate, Trigger.isDelete,
                 Trigger.isUnDelete, Trigger.new, Trigger.old, Schema.Sobjecttype.AffiliationSecurityRule__c,
                 new TDTM_ObjectDataGateway());
+    /*TDTM_Global_API.run(Trigger.isBefore, Trigger.isAfter, Trigger.isInsert, Trigger.isUpdate, Trigger.isDelete,
+        Trigger.isUnDelete, Trigger.new, Trigger.old, Schema.Sobjecttype.AffiliationSecurityRule__c);*/
 }
