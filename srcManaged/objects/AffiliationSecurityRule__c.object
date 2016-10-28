@@ -58,7 +58,7 @@
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
         <fullName>Account__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
+        <deleteConstraint>Restrict</deleteConstraint>
         <description>Organization that this type of affiliation has a relationship to.</description>
         <externalId>false</externalId>
         <inlineHelpText>Organization that this type of affiliation has a relationship to.</inlineHelpText>
@@ -66,7 +66,7 @@
         <referenceTo>Account</referenceTo>
         <relationshipLabel>Affiliation Security Rules</relationshipLabel>
         <relationshipName>Affiliation_Security_Rules</relationshipName>
-        <required>false</required>
+        <required>true</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
@@ -127,8 +127,9 @@
                 <fullName>Employee</fullName>
                 <default>false</default>
             </picklistValues>
+            <sorted>false</sorted>
         </picklist>
-        <required>false</required>
+        <required>true</required>
         <trackTrending>false</trackTrending>
         <type>MultiselectPicklist</type>
         <visibleLines>4</visibleLines>
@@ -151,7 +152,7 @@
         <inlineHelpText>Name of the checkbox field on the administrative account that controls access for this security rule.</inlineHelpText>
         <label>Security Field Name</label>
         <length>43</length>
-        <required>false</required>
+        <required>true</required>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
@@ -173,7 +174,7 @@
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
-        <required>false</required>
+        <required>true</required>
         <trackTrending>false</trackTrending>
         <type>MultiselectPicklist</type>
         <visibleLines>4</visibleLines>
