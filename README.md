@@ -1,6 +1,7 @@
 # Affiliation Security
 
 Note: This will not be ready until HEDA version 1.20 is released!
+
 Salesforce Higher-Ed Data Architecture (HEDA) Affiliation-Based Security for Salesforce
 
 ## Description
