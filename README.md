@@ -47,6 +47,11 @@ $ ant deployManaged -buildfile build.xml
 
 * If you get a test failure with the message "UNABLE_TO_LOCK_ROW", go to Setup>Develop>Apex Test Execution>Options and check the "Disable Parallel Apex Testing" checkbox.
 * You'll need to give the System Administrator profile access to the fields on the newly-created Affiliation Security Rule object as well as the Affiliation Security Rules tab. Additionally, you'll need to give access to the VIP field on Account.
+* Go to the Developer Console and run the following in an Execute Anonymous window:
+
+```
+UTIL_AffiliationSecurity.CreateTriggerHandlers();
+```
 
 ## Using Affiliation Security
 
