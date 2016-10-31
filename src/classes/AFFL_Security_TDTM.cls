@@ -32,7 +32,7 @@
 * @date 2016
 * @description Implements affiliation security when an affiliation is created/changed
 */
-public without sharing class AFFL_Security_TDTM extends TDTM_Runnable {
+global without sharing class AFFL_Security_TDTM extends TDTM_Runnable {
 
     /*******************************************************************************************************
     * @description Trigger Handler on Affiliation__c that handles affiliation security

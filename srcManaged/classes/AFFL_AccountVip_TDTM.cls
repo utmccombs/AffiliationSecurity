@@ -32,7 +32,7 @@
 * @date 2016
 * @description Implements VIP functionality for affiliation security
 */
-public class AFFL_AccountVip_TDTM extends hed.TDTM_Runnable {
+global class AFFL_AccountVip_TDTM extends hed.TDTM_Runnable {
 
     /*******************************************************************************************************
     * @description Trigger Handler on Account that handles vip accounts for affiliation security

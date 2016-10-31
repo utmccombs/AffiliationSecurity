@@ -32,7 +32,7 @@
 * @date 2016
 * @description Implements affiliation security when an affiliation is created/changed
 */
-public without sharing class AFFL_Security_TDTM extends hed.TDTM_Runnable {
+global without sharing class AFFL_Security_TDTM extends hed.TDTM_Runnable {
 
     /*******************************************************************************************************
     * @description Trigger Handler on hed__Affiliation__c that handles affiliation security

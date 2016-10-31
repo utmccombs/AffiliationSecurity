@@ -32,7 +32,7 @@
 * @date 2016
 * @description Implements affiliation security when an affiliation security rule is created/changed
 */
-public class AFFL_SecurityRule_TDTM extends TDTM_Runnable {
+global class AFFL_SecurityRule_TDTM extends TDTM_Runnable {
 
     /*******************************************************************************************************
     * @description Trigger Handler on AffiliationSecurityRule__c that handles affiliation security
