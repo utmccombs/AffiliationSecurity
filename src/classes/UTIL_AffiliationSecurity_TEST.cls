@@ -30,7 +30,7 @@
 /**
 * @author Kyle Schmid
 * @date 2016
-* @description Tests for AFFL_AccountVip_TDTM
+* @description Tests for UTIL_AffiliationSecurity
 */
 @isTest
 private class UTIL_AffiliationSecurity_TEST {
