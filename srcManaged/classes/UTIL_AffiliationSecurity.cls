@@ -76,6 +76,24 @@ public class UTIL_AffiliationSecurity {
         return true; // Return true if false hasn't been returned so far
     }
 
+    /*********************************************************************************************************
+    * @description Test Method for CreateTriggerHandlers
+    */
+    @isTest
+    static void test_create_method() {
+
+        Set<String> classes = new Set<String>{'AFFL_Security_TDTM', 'AFFL_SecurityRule_TDTM', 'AFFL_AccountVip_TDTM'};
+
+        Test.startTest();
+
+        UTIL_AffiliationSecurity.CreateTriggerHandlers();
+        Integer size = [SELECT Id FROM hed__Trigger_Handler__c WHERE hed__Class__c IN :classes].size();
+
+        Test.stopTest();
+
+        System.assertEquals(6, size);
+    }
+
     /*******************************************************************************************************
     * @description Inserts trigger handlers for affiliation security
     * @return void
