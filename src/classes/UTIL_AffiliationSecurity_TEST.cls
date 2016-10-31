@@ -36,7 +36,7 @@
 private class UTIL_AffiliationSecurity_TEST {
 
     /*********************************************************************************************************
-    * @description Test Method for a AffiliationMatches
+    * @description Test Method for AffiliationMatches
     */
     @isTest
     static void test_match_method() {
@@ -100,18 +100,34 @@ private class UTIL_AffiliationSecurity_TEST {
     }
 
     /*********************************************************************************************************
+    * @description Test Method for CreateTriggerHandlers
+    */
+    @isTest
+    static void test_create_method() {
+
+        Set<String> classes = new Set<String>{'AFFL_Security_TDTM', 'AFFL_SecurityRule_TDTM', 'AFFL_AccountVip_TDTM'};
+
+        Test.startTest();
+
+        UTIL_AffiliationSecurity.CreateTriggerHandlers();
+        Integer size = [SELECT Id FROM Trigger_Handler__c WHERE Class__c IN :classes].size();
+
+        Test.stopTest();
+
+        System.assertEquals(6, size);
+    }
+
+    /*********************************************************************************************************
     * @description Test setup method
     */
     @testSetup
     static void setup() {
 
-        insert TDTM_DefaultConfig.getDefaultRecords();
-        UTIL_AffiliationSecurity.CreateTriggerHandlers();
-        /*List<TDTM_Global_API.TdtmToken> tokens = TDTM_Global_API.getTdtmConfig();
+        List<TDTM_Global_API.TdtmToken> tokens = TDTM_Global_API.getTdtmConfig();
         tokens.add(new TDTM_Global_API.TdtmToken('AFFL_Security_TDTM', 'Affiliation__c', 'AfterInsert;AfterUpdate;AfterDelete', 5));
         tokens.add(new TDTM_Global_API.TdtmToken('AFFL_SecurityRule_TDTM', 'AffiliationSecurityRule__c', 'AfterInsert;AfterUpdate;AfterDelete', 1));
         tokens.add(new TDTM_Global_API.TdtmToken('AFFL_AccountVip_TDTM', 'Account', 'BeforeUpdate', 5));
-        TDTM_Global_API.setTdtmConfig(tokens);*/
+        TDTM_Global_API.setTdtmConfig(tokens);
 
         Account a1 = new Account(Name = 'test_acc_1');
         Account a2 = new Account(Name = 'test_acc_2');
