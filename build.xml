@@ -22,7 +22,7 @@
       	 <runTest>AFFL_AccountVip_TEST</runTest>
          <runTest>AFFL_Security_TEST</runTest>
          <runTest>AFFL_SecurityRule_TEST</runTest>
-         <runTest>UTIL_AffiliationSecurity</runTest>
+         <runTest>UTIL_AffiliationSecurity_TEST</runTest>
       </sf:deploy>
     </target>
 
@@ -31,7 +31,7 @@
       	 <runTest>AFFL_AccountVip_TEST</runTest>
          <runTest>AFFL_Security_TEST</runTest>
          <runTest>AFFL_SecurityRule_TEST</runTest>
-         <runTest>UTIL_AffiliationSecurity</runTest>
+         <runTest>UTIL_AffiliationSecurity_TEST</runTest>
       </sf:deploy>
     </target>
 </project>
