@@ -55,7 +55,7 @@ UTIL_AffiliationSecurity.CreateTriggerHandlers();
 
 ## Using Affiliation Security
 
-Once installed, you'll want to setup your first Affiliation Security Rule. To do so, follow these instructions:
+Once installed, you'll want to set up your first Affiliation Security Rule. To do so, follow these instructions:
 
 1. Create a checkbox field on the Account object that will be used to control access to a business unit
   * Only the System Administrator profile should have access to this field
