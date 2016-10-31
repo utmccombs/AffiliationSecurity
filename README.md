@@ -8,7 +8,7 @@ When we started our Salesforce implementation at the McCombs School of Business 
 
 ## Requirements
 
-* Installation of the <a href="https://github.com/SalesforceFoundation/HEDAP" target="_blank" >Higher-Ed Data Architecture (HEDA)</a> version 1.20 or later (managed or open-source). For managed package installations, this version is set to be pushed to sandbox instances on 10/31 and production instances on 11/15. You can install the release earlier by going <a href="https://github.com/SalesforceFoundation/HEDAP/releases/tag/rel%2F1.20" target="_blank" >here</a>.
+* Installation of the <a href="https://github.com/SalesforceFoundation/HEDAP" target="\_blank" >Higher-Ed Data Architecture (HEDA)</a> version 1.20 or later (managed or open-source). For managed package installations, this version is set to be pushed to sandbox instances on 10/31 and production instances on 11/15. You can install the release earlier by going <a href="https://github.com/SalesforceFoundation/HEDAP/releases/tag/rel%2F1.20" target="\_blank" >here</a>.
 * Administrative Account model configuration for HEDA
 
 ## Installation
