@@ -42,7 +42,7 @@ public without sharing class AFFL_Security_TDTM extends hed.TDTM_Runnable {
     * @param objResult the describe for Affiliations.
     * @return dmlWrapper.
     ********************************************************************************************************/
-    public override hed.DmlWrapper run(List<SObject> listNew, List<SObject> listOld, hed.TDTM_Runnable.Action triggerAction, Schema.DescribeSObjectResult objResult) {
+    public override hed.TDTM_Runnable.DmlWrapper run(List<SObject> listNew, List<SObject> listOld, hed.TDTM_Runnable.Action triggerAction, Schema.DescribeSObjectResult objResult) {
 
         List<hed__Affiliation__c> oldList;
         List<hed__Affiliation__c> newList;
@@ -84,7 +84,7 @@ public without sharing class AFFL_Security_TDTM extends hed.TDTM_Runnable {
                     break;
                 }
             }
-            if (!changed) return (new hed.DmlWrapper());
+            if (!changed) return (new hed.TDTM_Runnable.DmlWrapper());
         }
 
         // Get Set of all administrative account ids
@@ -156,6 +156,6 @@ public without sharing class AFFL_Security_TDTM extends hed.TDTM_Runnable {
 
         update adminAccs.values();
 
-        return (new hed.DmlWrapper());
+        return (new hed.TDTM_Runnable.DmlWrapper());
     }
 }

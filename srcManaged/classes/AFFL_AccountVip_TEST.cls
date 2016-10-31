@@ -77,7 +77,7 @@ private class AFFL_AccountVip_TEST {
     static void setup() {
 
         List<hed.TDTM_Global_API.TdtmToken> tokens = hed.TDTM_Global_API.getTdtmConfig();
-        tokens.add(new hed.TDTM_Global_API.TdtmToken('AFFL_Security_TDTM', 'hed__Affiliation__c', 'AfterInsert;AfterUpdate;AfterDelete', 5));
+        tokens.add(new hed.TDTM_Global_API.TdtmToken('AFFL_Security_TDTM', 'Affiliation__c', 'AfterInsert;AfterUpdate;AfterDelete', 5));
         tokens.add(new hed.TDTM_Global_API.TdtmToken('AFFL_SecurityRule_TDTM', 'AffiliationSecurityRule__c', 'AfterInsert;AfterUpdate;AfterDelete', 1));
         tokens.add(new hed.TDTM_Global_API.TdtmToken('AFFL_AccountVip_TDTM', 'Account', 'BeforeUpdate', 5));
         hed.TDTM_Global_API.setTdtmConfig(tokens);

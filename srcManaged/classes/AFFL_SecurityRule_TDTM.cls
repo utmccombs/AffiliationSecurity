@@ -42,9 +42,9 @@ public class AFFL_SecurityRule_TDTM extends hed.TDTM_Runnable {
     * @param objResult the describe for Affiliation Security Rules.
     * @return dmlWrapper.
     ********************************************************************************************************/
-    public override DmlWrapper run(List<SObject> listNew, List<SObject> listOld, hed.TDTM_Runnable.Action triggerAction, Schema.DescribeSObjectResult objResult) {
+    public override hed.TDTM_Runnable.DmlWrapper run(List<SObject> listNew, List<SObject> listOld, hed.TDTM_Runnable.Action triggerAction, Schema.DescribeSObjectResult objResult) {
 
-        hed.DmlWrapper dmlWrapper = new hed.DmlWrapper();
+        hed.TDTM_Runnable.DmlWrapper dmlWrapper = new hed.TDTM_Runnable.DmlWrapper();
 
         List<AffiliationSecurityRule__c> oldList;
         List<AffiliationSecurityRule__c> newList;

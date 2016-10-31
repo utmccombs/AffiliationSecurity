@@ -42,7 +42,7 @@ public class AFFL_AccountVip_TDTM extends hed.TDTM_Runnable {
     * @param objResult the describe for Accounts.
     * @return dmlWrapper.
     ********************************************************************************************************/
-    public override hed.DmlWrapper run(List<SObject> listNew, List<SObject> listOld, hed.TDTM_Runnable.Action triggerAction, Schema.DescribeSObjectResult objResult) {
+    public override hed.TDTM_Runnable.DmlWrapper run(List<SObject> listNew, List<SObject> listOld, hed.TDTM_Runnable.Action triggerAction, Schema.DescribeSObjectResult objResult) {
 
         // Get list of accounts whose Vip__c field has changed
         // Get set of account ids
@@ -58,7 +58,7 @@ public class AFFL_AccountVip_TDTM extends hed.TDTM_Runnable {
         }
 
         // Exit if nothing to do here
-        if (accList.isEmpty()) return (new hed.DmlWrapper());
+        if (accList.isEmpty()) return (new hed.TDTM_Runnable.DmlWrapper());
 
         // Get map of affiliations that have to do with accounts' contacts with admin account id as key
         // Get set of account ids that have to do with these affiliations
@@ -95,6 +95,6 @@ public class AFFL_AccountVip_TDTM extends hed.TDTM_Runnable {
                             if (UTIL_AffiliationSecurity.AffiliationMatches(r, affl, a.Vip__c))
                                 a.put(r.SecurityFieldNameLower__c, true);
 
-        return (new hed.DmlWrapper());
+        return (new hed.TDTM_Runnable.DmlWrapper());
     }
 }
