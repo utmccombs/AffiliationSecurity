@@ -1,6 +1,6 @@
 # Affiliation Security
 
-Salesforce Higher-Ed Data Architecture (HEDA) Affiliation-Based Security for Salesforce
+Higher-Ed Data Architecture (HEDA) Affiliation-Based Security for Salesforce
 
 ## Description
 
