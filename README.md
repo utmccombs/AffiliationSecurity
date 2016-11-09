@@ -67,4 +67,4 @@ Once installed, you'll want to set up your first Affiliation Security Rule. To d
   * Note: Security Field Name is the API name of the field you created in step 1
   * If Override VIP is checked, this rule will grant access even if the Contact's Administrative Account is marked as a "VIP" (Vip__c checkbox on Account)
 
-That's it! Now any contact with an Affiliation matching the template you defined will be shared with the group of users you specified.
+That's it! Now any contact with an Affiliation matching the template you defined will be shared with the group of users you specified. Note that Salesforce limits the number of criteria-based sharing rules you can create to 50 per object. If you have a more than 50 groups you want to create rules for, you should consider another approach, such as Apex sharing rules.
