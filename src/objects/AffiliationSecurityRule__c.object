@@ -129,7 +129,7 @@
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
-        <required>true</required>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>MultiselectPicklist</type>
         <visibleLines>4</visibleLines>
@@ -174,7 +174,7 @@
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
-        <required>true</required>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>MultiselectPicklist</type>
         <visibleLines>4</visibleLines>
