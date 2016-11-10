@@ -98,7 +98,27 @@ private class UTIL_AffiliationSecurity_TEST {
 
         Test.stopTest();
     }
-
+    
+    /*********************************************************************************************************
+    * @description Test Method for GetAdminAccountMap
+    */
+    @isTest
+    static void test_account_query_method() {
+        
+        Id accId = [SELECT Id FROM Account WHERE Name = :'test_acc_1'].Id;
+        Set<Id> accIds = new Set<Id>{accId};
+        Set<String> accNames = new Set<String>();
+        
+        Test.startTest();
+        
+        Map<Id, Account> result = UTIL_AffiliationSecurity.GetAdminAccountMap(accNames, accIds);
+        
+        Test.stopTest();
+        
+        System.assertEquals(1, result.size());
+        System.assert(result.containsKey(accId));
+    }
+    
     /*********************************************************************************************************
     * @description Test Method for CreateTriggerHandlers
     */

@@ -75,7 +75,27 @@ public class UTIL_AffiliationSecurity {
 
         return true; // Return true if false hasn't been returned so far
     }
-
+    
+    /*******************************************************************************************************
+    * @description Queries administrative accounts based on parameters
+    * @param fieldNames Set of field names to include in query
+    * @param accountIds Set of Account record its to include in query result
+    * @return Map<Id, Account> Map of Accounts with Account ID as key
+    */
+    public static Map<Id, Account> GetAdminAccountMap(Set<String> fieldNames, Set<Id> accountIds) {
+        
+        fieldNames.add('vip__c'); // Make sure vip is being queried
+        
+        // Build query
+        String query = 'SELECT ';
+        for (String f:fieldNames)
+            query += (f + ', ');
+        query += 'Id FROM Account WHERE Id IN :accountIds';
+        
+        // Query and return map
+        return new Map<Id, Account>((List<Account>)Database.query(query));
+    }
+    
     /*******************************************************************************************************
     * @description Inserts trigger handlers for affiliation security
     * @return void

@@ -109,12 +109,7 @@ global without sharing class AFFL_Security_TDTM extends hed.TDTM_Runnable {
         }
 
         // Get map of administrative accounts with Id as key
-        fields.add('vip__c');
-        String query = 'SELECT ';
-        for (String f:fields)
-            query += (f + ', ');
-        query += 'Id FROM Account WHERE Id IN :adminIds';
-        Map<Id, Account> adminAccs = new Map<Id, Account>((List<Account>)Database.query(query));
+        Map<Id, Account> adminAccs = UTIL_AffiliationSecurity.GetAdminAccountMap(fields, adminIds);
 
         // newList is read only so we have to duplicate
         List<hed__Affiliation__c> newAfflList = new List<hed__Affiliation__c>();
