@@ -4,7 +4,7 @@ Higher-Ed Data Architecture (HEDA) Affiliation-Based Security for Salesforce
 
 ## Description
 
-When we started our Salesforce implementation at the McCombs School of Business (University of Texas at Austin), we found that Contact record sharing amongst various departments around the college was an interesting problem that needed solving. We needed to share and un-share Contact records as our students progressed through the student lifecycle. When the Salesforce Foundation released the Higher-Ed Data Architecture (HEDA), we determined that a security solution based on the Affiliations object would be ideal. We then built a solution that allows admins to define an Affiliation "template" and share a Contact record with a group of users if the Contact had an Affiliation that fit said template.
+When we started our Salesforce implementation at the McCombs School of Business (University of Texas at Austin), we found that Contact record sharing amongst various departments around the college was an interesting problem that needed solving. We needed to share and un-share Contact records as our students progressed through the student lifecycle. When the Salesforce Foundation released the Higher-Ed Data Architecture (HEDA), we determined that a security solution based on the Affiliations object would be ideal. We then built a solution that allows admins to define an Affiliation "template" and share a Contact record with a group of users if the Contact had an Affiliation that fit said template. You can watch a demo of this solution <a href="https://youtu.be/D5e4RTATwYo" >here</a>.
 
 ## Requirements
 
