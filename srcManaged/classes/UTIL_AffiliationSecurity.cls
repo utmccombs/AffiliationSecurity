@@ -37,22 +37,22 @@ public class UTIL_AffiliationSecurity {
     /*******************************************************************************************************
     * @description Compares affiliation to an affiliation rule to see if they match
     * @param rule Affiliation Security Rule to compare to
-    * @param affliation Affiliation to test
+    * @param affiliation Affiliation to test
     * @param isVip Whether or not account for this affiliation is a VIP account
     * @return Boolean true if affiliation matches affiliation security rule
     */
-    public static Boolean AffiliationMatches(AffiliationSecurityRule__c rule, hed__Affiliation__c affliation, Boolean isVip) {
+    public static Boolean AffiliationMatches(AffiliationSecurityRule__c rule, hed__Affiliation__c affiliation, Boolean isVip) {
 
         // Return false if contact is a VIP and rule doesn't override VIP
         if (!rule.OverrideVip__c && isVip)
             return false;
 
         // Return false if accounts don't match
-        if (rule.Account__c != affliation.hed__Account__c)
+        if (rule.Account__c != affiliation.hed__Account__c)
             return false;
 
         // Return false if rule calls for primary and affiliation isn't primary
-        if (rule.Primary__c && !affliation.hed__Primary__c)
+        if (rule.Primary__c && !affiliation.hed__Primary__c)
             return false;
 
         // Return false if rule role field doesn't contain affiliation's role
@@ -60,7 +60,7 @@ public class UTIL_AffiliationSecurity {
             Set<String> roles = new Set<String>();
             for (String s:rule.Role__c.split(';'))
                 roles.add(s.trim());
-            if (!roles.contains(affliation.hed__Role__c))
+            if (!roles.contains(affiliation.hed__Role__c))
                 return false;
         }
 
@@ -69,7 +69,7 @@ public class UTIL_AffiliationSecurity {
             Set<String> statuses = new Set<String>();
             for (String s:rule.Status__c.split(';'))
                 statuses.add(s.trim());
-            if (!statuses.contains(affliation.hed__Status__c))
+            if (!statuses.contains(affiliation.hed__Status__c))
                 return false;
         }
 
