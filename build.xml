@@ -34,4 +34,9 @@
          <runTest>UTIL_AffiliationSecurity_TEST</runTest>
       </sf:deploy>
     </target>
+    
+    <target name="undeploy" >
+        <sf:deploy username="${sf.username}" password="${sf.password}" sessionId="${sf.sessionId}" serverurl="${sf.serverurl}" maxPoll="${sf.maxPoll}" deployRoot="undeploy" />
+    </target>
+    
 </project>

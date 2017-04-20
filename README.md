@@ -53,6 +53,21 @@ $ ant deployManaged
 UTIL_AffiliationSecurity.CreateTriggerHandlers();
 ```
 
+## Uninstallation
+
+* Undeploy using ant
+
+```sh
+$ cd AffiliationSecurity
+$ ant undeploy
+```
+
+* Delete Trigger Handler for AFFL_Security_TDTM
+* Delete Trigger Handler for AFFL_SecurityRule_TDTM
+* Delete Trigger Handler for AFFL_AccountVip_TDTM
+* Erase the Affiliation Security Rule object under Setup>Create>Custom Objects>Deleted Objects
+* Erase the Vip__c field under Setup>Customize>Accounts>Fields>Deleted Fields
+
 ## Using Affiliation Security
 
 Once installed, you'll want to set up your first Affiliation Security Rule. To do so, follow these instructions:
