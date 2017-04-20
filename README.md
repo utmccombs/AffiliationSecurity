@@ -1,10 +1,12 @@
 # Affiliation Security
 
-Higher-Ed Data Architecture (HEDA) Affiliation-Based Security for Salesforce
+<a href="https://github.com/SalesforceFoundation/HEDAP" >Higher-Ed Data Architecture (HEDA)</a> Affiliation-Based Security for Salesforce
 
 ## Description
 
 When we started our Salesforce implementation at the McCombs School of Business (University of Texas at Austin), we found that Contact record sharing amongst various departments around the college was an interesting problem that needed solving. We needed to share and un-share Contact records as our students progressed through the student lifecycle. When the Salesforce Foundation released the Higher-Ed Data Architecture (HEDA), we determined that a security solution based on the Affiliations object would be ideal. We then built a solution that allows admins to define an Affiliation "template" and share a Contact record with a group of users if the Contact had an Affiliation that fit said template. You can watch a demo of this solution <a href="https://youtu.be/D5e4RTATwYo" >here</a>.
+
+A less security-focused implementation of this solution called Affiliation Templates can be found <a href="https://github.com/kyleschmid/AffiliationTemplates" >here</a>. Affiliation Templates allows checkboxes to be checked on the Contact as well as the Account. It also works with Salesforce.org's <a href="https://github.com/SalesforceFoundation/Cumulus" >Non-Profit Success Pack (NPSP)</a>.
 
 ## Requirements
 
@@ -34,13 +36,13 @@ sf.maxPoll = 20
 Open-source installation of HEDA:
 ```sh
 $ cd AffiliationSecurity
-$ ant deploy -buildfile build.xml
+$ ant deploy
 ```
 
 Managed package installation of HEDA:
 ```sh
 $ cd AffiliationSecurity
-$ ant deployManaged -buildfile build.xml
+$ ant deployManaged
 ```
 
 * If you get a test failure with the message "UNABLE_TO_LOCK_ROW", go to Setup>Develop>Apex Test Execution>Options and check the "Disable Parallel Apex Testing" checkbox.
