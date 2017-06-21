@@ -105,15 +105,15 @@ public class UTIL_AffiliationSecurity {
 
         handlers.add(new Trigger_Handler__c(Active__c = true, Asynchronous__c = false,
             Class__c = 'AFFL_Security_TDTM', Load_Order__c = 5, Object__c = 'Affiliation__c',
-            Trigger_Action__c = 'AfterInsert;AfterUpdate;AfterDelete'));
+            Trigger_Action__c = 'AfterInsert;AfterUpdate;AfterDelete', User_Managed__c = true));
 
         handlers.add(new Trigger_Handler__c(Active__c = true, Asynchronous__c = false,
             Class__c = 'AFFL_SecurityRule_TDTM', Load_Order__c = 1, Object__c = 'AffiliationSecurityRule__c',
-            Trigger_Action__c = 'AfterInsert;AfterUpdate;AfterDelete'));
+            Trigger_Action__c = 'AfterInsert;AfterUpdate;AfterDelete', User_Managed__c = true));
 
         handlers.add(new Trigger_Handler__c(Active__c = true, Asynchronous__c = false,
             Class__c = 'AFFL_AccountVip_TDTM', Load_Order__c = 5, Object__c = 'Account',
-            Trigger_Action__c = 'BeforeUpdate'));
+            Trigger_Action__c = 'BeforeUpdate', User_Managed__c = true));
 
         insert handlers;
     }
