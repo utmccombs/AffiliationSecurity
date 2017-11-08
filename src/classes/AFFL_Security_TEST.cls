@@ -227,9 +227,9 @@ private class AFFL_Security_TEST {
     static void setup() {
 
         List<TDTM_Global_API.TdtmToken> tokens = TDTM_Global_API.getTdtmConfig();
-        tokens.add(new TDTM_Global_API.TdtmToken('AFFL_Security_TDTM', 'Affiliation__c', 'AfterInsert;AfterUpdate;AfterDelete', 5));
-        tokens.add(new TDTM_Global_API.TdtmToken('AFFL_SecurityRule_TDTM', 'AffiliationSecurityRule__c', 'AfterInsert;AfterUpdate;AfterDelete', 1));
-        tokens.add(new TDTM_Global_API.TdtmToken('AFFL_AccountVip_TDTM', 'Account', 'BeforeUpdate', 5));
+        tokens.add(new TDTM_Global_API.TdtmToken('AFFL_Security_TDTM', 'Affiliation__c', 'AfterInsert;AfterUpdate;AfterDelete', 5.0));
+        tokens.add(new TDTM_Global_API.TdtmToken('AFFL_SecurityRule_TDTM', 'AffiliationSecurityRule__c', 'AfterInsert;AfterUpdate;AfterDelete', 1.0));
+        tokens.add(new TDTM_Global_API.TdtmToken('AFFL_AccountVip_TDTM', 'Account', 'BeforeUpdate', 5.0));
         TDTM_Global_API.setTdtmConfig(tokens);
 
         Account a1 = new Account(Name = 'test_acc_1');

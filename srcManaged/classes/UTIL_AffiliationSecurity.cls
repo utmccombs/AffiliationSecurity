@@ -104,15 +104,15 @@ public class UTIL_AffiliationSecurity {
         List<hed__Trigger_Handler__c> handlers = new List<hed__Trigger_Handler__c>();
 
         handlers.add(new hed__Trigger_Handler__c(hed__Active__c = true, hed__Asynchronous__c = false,
-            hed__Class__c = 'AFFL_Security_TDTM', hed__Load_Order__c = 5, hed__Object__c = 'Affiliation__c',
+            hed__Class__c = 'AFFL_Security_TDTM', hed__Load_Order__c = 5.0, hed__Object__c = 'Affiliation__c',
             hed__Trigger_Action__c = 'AfterInsert;AfterUpdate;AfterDelete', hed__User_Managed__c = true));
 
         handlers.add(new hed__Trigger_Handler__c(hed__Active__c = true, hed__Asynchronous__c = false,
-            hed__Class__c = 'AFFL_SecurityRule_TDTM', hed__Load_Order__c = 1, hed__Object__c = 'AffiliationSecurityRule__c',
+            hed__Class__c = 'AFFL_SecurityRule_TDTM', hed__Load_Order__c = 1.0, hed__Object__c = 'AffiliationSecurityRule__c',
             hed__Trigger_Action__c = 'AfterInsert;AfterUpdate;AfterDelete', hed__User_Managed__c = true));
 
         handlers.add(new hed__Trigger_Handler__c(hed__Active__c = true, hed__Asynchronous__c = false,
-            hed__Class__c = 'AFFL_AccountVip_TDTM', hed__Load_Order__c = 5, hed__Object__c = 'Account',
+            hed__Class__c = 'AFFL_AccountVip_TDTM', hed__Load_Order__c = 5.0, hed__Object__c = 'Account',
             hed__Trigger_Action__c = 'BeforeUpdate', hed__User_Managed__c = true));
 
         insert handlers;

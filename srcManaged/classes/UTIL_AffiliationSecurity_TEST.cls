@@ -144,9 +144,9 @@ private class UTIL_AffiliationSecurity_TEST {
     static void setup() {
 
         List<hed.TDTM_Global_API.TdtmToken> tokens = hed.TDTM_Global_API.getTdtmConfig();
-        tokens.add(new hed.TDTM_Global_API.TdtmToken('AFFL_Security_TDTM', 'Affiliation__c', 'AfterInsert;AfterUpdate;AfterDelete', 5));
-        tokens.add(new hed.TDTM_Global_API.TdtmToken('AFFL_SecurityRule_TDTM', 'AffiliationSecurityRule__c', 'AfterInsert;AfterUpdate;AfterDelete', 1));
-        tokens.add(new hed.TDTM_Global_API.TdtmToken('AFFL_AccountVip_TDTM', 'Account', 'BeforeUpdate', 5));
+        tokens.add(new hed.TDTM_Global_API.TdtmToken('AFFL_Security_TDTM', 'Affiliation__c', 'AfterInsert;AfterUpdate;AfterDelete', 5.0));
+        tokens.add(new hed.TDTM_Global_API.TdtmToken('AFFL_SecurityRule_TDTM', 'AffiliationSecurityRule__c', 'AfterInsert;AfterUpdate;AfterDelete', 1.0));
+        tokens.add(new hed.TDTM_Global_API.TdtmToken('AFFL_AccountVip_TDTM', 'Account', 'BeforeUpdate', 5.0));
         hed.TDTM_Global_API.setTdtmConfig(tokens);
 
         Account a1 = new Account(Name = 'test_acc_1');
